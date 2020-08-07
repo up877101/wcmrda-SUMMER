@@ -1,0 +1,6 @@
+the application developed for user control along with test code lives here
+
+on looking into how to build the gui with integrated cv2 image stream turned up
+tkinter - pretty standard library for python gui development:
+    https://www.pyimagesearch.com/2016/05/23/opencv-with-tkinter/
+

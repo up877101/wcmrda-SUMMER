@@ -1,0 +1,34 @@
+code that runs on the raspberry pi along with tests lives here
+
+ssh into the pi with: 'ssh __@___.___.___.___'
+the login password is '_____'
+
+1/12/2019 - enabled I2C on the Pi, changed the baud rate to 400Mhz. 
+
+The raspberry pi needs several pieces of base software
+it needs installed and update:
+- python3 and its dev packages
+- pip3 for package management for python3
+- opencv 4 - built from binaries or done using a shell script
+- scipy packages such as numpy
+- python3-smbus
+
+dependencies.sh does not include the downloading and installing of OpenCV since
+I think both machines already have 4.1.1 installed
+
+the image passing library that is used on the pi is imagezmq
+on the pi system it needs to be installed along with its dependencies
+use pip3 to get the necessary packages:
+- opencv-contrib-python
+- zmq
+- imutils
+
+get the imagezmq repository from github
+    git clone https://github.com/jeffbass/imagezmq.git
+
+(you can then place imagezmq in the project folder in which you will use it
+ not however that it is better to sym-link it into your virtual environment)
+
+refer to this guide for setup and function of image passing:
+https://www.pyimagesearch.com/2019/04/15/live-video-streaming-over-network-with-opencv-and-imagezmq/
+
